@@ -1,0 +1,43 @@
+@mixin nav-mobile-slide($selectors...) {
+  @for $i from 0 to length($selectors){
+    #{$selectors} {
+      margin-left: 2rem;
+      transition: all 0.2s ease-in;
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    };
+    
+    &.active #{$selectors} {
+      max-height: 200px;
+      margin-top: 3rem;
+    }
+    &.active .arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+}
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+        type-of($raw-query)=='string',
+        unquote($raw-query),
+        inspect($raw-query)
+        );
+
+    @media #{$query} {
+      @content;
+    }
+  }
+
+  @else {
+    @error 'No value found for `#{$breakpoint}`. '
+    +'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

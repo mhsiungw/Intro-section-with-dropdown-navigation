@@ -1,6 +1,6 @@
 $breakpoints: (
-  'mobile': 375px,
-  'desktop': 1440px
+  'mobile': (min-width: 375px),
+  'desktop': (min-width: 1440px)
 );
 
 $almos-white: hsl(0, 0%, 98%);

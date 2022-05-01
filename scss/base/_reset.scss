@@ -10,3 +10,18 @@ html {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
+a, a:focus, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main--logos img, img {
+  width: 100%;
+  height: 100%;
+}
+
+

@@ -1,9 +1,15 @@
 // abstract
+@import './abstracts/variables';
+@import './abstracts/mixins';
 // vendors
 // base
 @import './base/typography';
 @import './base/reset';
 // layout
+@import './layout/header';
+@import './layout/main';
 // components
+@import './components/nav';
+@import './components/main';
 // pages
 // themes

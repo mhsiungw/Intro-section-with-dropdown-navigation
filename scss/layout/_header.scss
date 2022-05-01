@@ -1,0 +1,11 @@
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  @include respond-to('desktop'){
+  justify-content: flex-start;
+  gap: 15rem;
+  padding: 3rem 6rem;
+  }
+}

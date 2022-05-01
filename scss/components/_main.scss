@@ -1,0 +1,68 @@
+main {
+  .main--content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex-grow: 1;
+    .main--desc {
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include respond-to('desktop') {
+        flex-grow: 1;
+        align-items: baseline;
+        gap: 12rem;
+      };
+      gap: 3rem;
+      .main--title {
+        @include respond-to('desktop') {
+          font-size: 10rem;
+          width: 66rem;
+        };
+      };
+      button {
+        width: 10rem;
+        padding: .8rem;
+        border-radius: 1rem;
+        border: none;
+        background: #000;
+        color: $almos-white;
+        @include respond-to('desktop') {
+          font-size: 3rem;
+          width: 25rem;
+          padding: 1.5rem;
+        }
+      }
+      .main--paragraph {
+        color: $medium-gray;
+        @include respond-to('desktop') {
+          font-size: 3rem;
+          line-height: 5rem;
+          width: 66rem;
+        };
+      }
+    }
+
+
+
+    .main--logos {
+      width: 100vw;
+      @include respond-to('desktop'){
+        width: 100%;
+      };
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      img{
+        flex-grow: 1;
+      @include respond-to('desktop') {
+        flex-grow: 0;
+        max-width: 15%;
+        object-fit: contain;
+      };
+      }
+    }
+  }
+
+}

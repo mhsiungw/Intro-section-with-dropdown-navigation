@@ -1,0 +1,12 @@
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5rem;
+  @include respond-to('desktop') {
+    flex-direction: row-reverse;
+    padding: 20rem;
+    text-align: left;
+    gap: 25rem;
+  };
+}
